@@ -1,0 +1,12 @@
+First I would like to approach this mini project as if I have a problem to solve, the project will be solved with adopting K-nearest neighbour (KNN) predictive model , so obviously it is a classification model challenge. In this case I’ve chosen a dataset related to healthcare which is associated to a diabetes database from the National Institute of Diabetes and Digestive , I will try to test the data if a person is a diabetes or not . The dataset was obtained from Kaggle which is a website offers a variety list of different datasets based on real live data and occurrences. Therefore, without further ado let’s start deciphering the dataset and create a predictive model using KNN with cross validation model.
+
+Description of dataset :
+
+I’ve obtained the subjected dataset from Kaggle , however the dataset was initially presented by the National Institute of Diabetes and Digestive and Kidney Diseases .The dataset is consist of predictive variables and Outcome in which it describes if a person is a diabetes of not. The dataset represents a list of study from different patients that leads to classification of either diabetic or not. For this coursework I will use these presented data and adopt a Knn algorithm to test some given data of patients and see if they are under either category diabetes or non-diabetic. Total number of studied list in this dataset related to diabetic and non-diabetic patient is 768 , which we will manipulate ,scrap and clean these data to use them in our KNN predictive model.
+Before we start working on our predictive model using Knn algorithm , we need to know a bit about what is KNN algorithm .
+
+KNN algorithm is a supervised machine learning algorithm that deals with similarity . KNN stands for K-Nearest Neighbors. It’s basically a classification algorithm that will make a prediction of a class of a target variable based on a defined number of nearest neighbors. It will calculate distance from the instance you want to classify to every instance of the training dataset, and then classify your instance based on the majority classes of k nearest instances.
+
+Distance between data points in Knn algorithm
+
+For this project the library by default will consider the Euclidean distance to measure the distance between two data points or vectors from the dataset.
