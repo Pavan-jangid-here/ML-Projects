@@ -1,0 +1,54 @@
+artifact_path: file:///c:/Users/Lenovo/Desktop/ML_Projects/ML-Projects/7. Appliance
+  Energy Prediction/mlruns/1/models/m-fcef5be577d34bba93ce3e9ec4d5861c/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.11.0
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBRegressor
+    model_format: ubj
+    xgb_version: 3.0.4
+is_signature_from_type_hint: false
+mlflow_version: 3.8.1
+model_id: m-fcef5be577d34bba93ce3e9ec4d5861c
+model_size_bytes: 3002790
+model_uuid: m-fcef5be577d34bba93ce3e9ec4d5861c
+prompts: null
+run_id: f6488a27410c49ad9c7b853c2f9ad711
+signature:
+  inputs: '[{"type": "long", "name": "lights", "required": true}, {"type": "double",
+    "name": "T1", "required": true}, {"type": "double", "name": "RH_1", "required":
+    true}, {"type": "double", "name": "T2", "required": true}, {"type": "double",
+    "name": "RH_2", "required": true}, {"type": "double", "name": "T3", "required":
+    true}, {"type": "double", "name": "RH_3", "required": true}, {"type": "double",
+    "name": "T4", "required": true}, {"type": "double", "name": "RH_4", "required":
+    true}, {"type": "double", "name": "T5", "required": true}, {"type": "double",
+    "name": "RH_5", "required": true}, {"type": "double", "name": "T6", "required":
+    true}, {"type": "double", "name": "RH_6", "required": true}, {"type": "double",
+    "name": "T7", "required": true}, {"type": "double", "name": "RH_7", "required":
+    true}, {"type": "double", "name": "T8", "required": true}, {"type": "double",
+    "name": "RH_8", "required": true}, {"type": "double", "name": "T9", "required":
+    true}, {"type": "double", "name": "RH_9", "required": true}, {"type": "double",
+    "name": "T_out", "required": true}, {"type": "double", "name": "Press_mm_hg",
+    "required": true}, {"type": "double", "name": "RH_out", "required": true}, {"type":
+    "double", "name": "Windspeed", "required": true}, {"type": "double", "name": "Visibility",
+    "required": true}, {"type": "double", "name": "Tdewpoint", "required": true},
+    {"type": "integer", "name": "hour", "required": true}, {"type": "integer", "name":
+    "day_of_week", "required": true}, {"type": "integer", "name": "month", "required":
+    true}, {"type": "integer", "name": "is_weekend", "required": true}, {"type": "double",
+    "name": "hour_sin", "required": true}, {"type": "double", "name": "hour_cos",
+    "required": true}, {"type": "double", "name": "Appliances_lag1", "required": true},
+    {"type": "double", "name": "Appliances_lag2", "required": true}, {"type": "double",
+    "name": "Appliances_lag6", "required": true}, {"type": "double", "name": "Appliances_roll3_mean",
+    "required": true}, {"type": "double", "name": "Appliances_roll6_mean", "required":
+    true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-01-26 06:48:58.745926'
