@@ -12,7 +12,7 @@ from sklearn.metrics import silhouette_score
 # -----------------------------
 # Config
 # -----------------------------
-DATA_PATH = "data/Wholesale_customers_data.csv"
+DATA_PATH = "data/Wholesale customers data.csv"
 MODEL_DIR = "models"
 RANDOM_STATE = 42
 PCA_VARIANCE = 0.9

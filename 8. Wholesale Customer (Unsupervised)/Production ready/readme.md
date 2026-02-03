@@ -22,12 +22,16 @@ wholesale-ml/
 
 
 pip install mlflow
-run mlflow ui
-
 pip install fastapi uvicorn
 
+# Run this commands
+```
+cd to Production Ready folder using cd function
+python src/train.py
+run mlflow ui
 uvicorn app:app --reload
-
+Use py file called usage and detect_drift.py for the testing purpose.
+```
 
 ## Test of api:
 POST /predict
