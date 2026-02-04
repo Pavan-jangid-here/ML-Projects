@@ -1,0 +1,5 @@
+```dockerignore
+8. Wholesale Customer (Unsupervised)\Production ready\__pycache__
+8. Wholesale Customer (Unsupervised)\Production ready\mlruns
+8. Wholesale Customer (Unsupervised)\Production ready\data
+8. Wholesale Customer (Unsupervised)\Production ready\models
