@@ -1,5 +1,3 @@
-import numpy as np
-import pandas as pd
 from scipy.stats import ks_2samp
 
 def detect_drift(reference_df, new_df, threshold=0.05):
