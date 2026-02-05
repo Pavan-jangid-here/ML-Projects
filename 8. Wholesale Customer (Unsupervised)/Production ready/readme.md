@@ -56,3 +56,15 @@ drift = detect_drift(train_data[numerical_cols], new_data[numerical_cols])
 Run weekly/monthly
 
 Trigger retraining if drift detected
+
+
+# How to Dockerize the app
+
+```
+1. How to build the image
+docker build -t wholesale-ml:latest .
+
+2. How to run the builded image
+docker run -p 8000:8000 wholesale-ml:latest
+
+```
