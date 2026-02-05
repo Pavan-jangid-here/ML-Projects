@@ -1,0 +1,37 @@
+name: Wholesale ML CI
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "8. Wholesale Customer (Unsupervised)\Production ready"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: "8. Wholesale Customer (Unsupervised)\Production ready"
+
+    steps:
+      - name: Download repo code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Sanity check import
+        run: |
+          python -c "import fastapi, sklearn, numpy, pandas"
+
+      - name: Build Docker image
+        run: |
+          docker build -t wholesale-ml:latest .
