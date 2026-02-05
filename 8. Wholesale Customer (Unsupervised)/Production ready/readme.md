@@ -68,3 +68,8 @@ docker build -t wholesale-ml:latest .
 docker run -p 8000:8000 wholesale-ml:latest
 
 ```
+
+
+# Working on CI/CD pipeline
+
+1. created the ci.yml
