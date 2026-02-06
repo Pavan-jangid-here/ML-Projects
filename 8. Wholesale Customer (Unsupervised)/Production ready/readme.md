@@ -73,3 +73,5 @@ docker run -p 8000:8000 wholesale-ml:latest
 # Working on CI/CD pipeline
 
 1. created the ci.yml
+2. linux path to be used. like this paths:
+      - "8. Wholesale Customer (Unsupervised)/Production ready/**"
