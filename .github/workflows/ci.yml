@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
     paths:
-      - "8. Wholesale Customer (Unsupervised)\Production ready"
+      - "8. Wholesale Customer (Unsupervised)/Production ready/**"
 
 jobs:
   build:
