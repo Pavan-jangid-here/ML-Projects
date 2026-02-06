@@ -12,7 +12,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: "8. Wholesale Customer (Unsupervised)\Production ready"
+        working-directory: "8. Wholesale Customer (Unsupervised)/Production ready"
 
     steps:
       - name: Download repo code
