@@ -89,3 +89,4 @@ docker run -p 8000:8000 wholesale-ml:latest
             2. GHCR
             3. Kubernetes
             4. Cloud registries
+4. Converted to lower case letter using [:upper:] [:lower:]
