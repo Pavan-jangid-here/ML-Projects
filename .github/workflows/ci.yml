@@ -6,6 +6,10 @@ on:
     paths:
       - "8. Wholesale Customer (Unsupervised)/Production ready/**"
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,7 +19,7 @@ jobs:
         working-directory: "8. Wholesale Customer (Unsupervised)/Production ready"
 
     steps:
-      - name: Download repo code
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -32,6 +36,15 @@ jobs:
         run: |
           python -c "import fastapi, sklearn, numpy, pandas"
 
+      - name: Login to GHCR
+        run: |
+          echo "${{ secret.GITHUB_TOKEN }}" | docker login ghcr.io\
+            -u ${{ github.actor }} --password-stdin
+
       - name: Build Docker image
         run: |
           docker build -t wholesale-ml:latest .
+
+      - name: Push image to GHCR
+        run: |
+          docker push ghcr.io/${{ github.repository_owner }}/wholesale-ml:latest

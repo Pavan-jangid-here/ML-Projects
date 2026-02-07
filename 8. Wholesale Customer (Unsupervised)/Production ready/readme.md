@@ -76,3 +76,8 @@ docker run -p 8000:8000 wholesale-ml:latest
 2. linux path to be used. like this paths:
       - "8. Wholesale Customer (Unsupervised)/Production ready/**"
 3. Always use this "/" instead of "\" for path in ci.yml
+
+
+# Set to register the API in Github Container register
+
+1. Added lines in ci.yml
