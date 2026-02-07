@@ -81,3 +81,4 @@ docker run -p 8000:8000 wholesale-ml:latest
 # Set to register the API in Github Container register
 
 1. Added lines in ci.yml
+2. Also update the build docker image with ghcr.io

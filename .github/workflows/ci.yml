@@ -38,12 +38,12 @@ jobs:
 
       - name: Login to GHCR
         run: |
-          echo "${{ secret.GITHUB_TOKEN }}" | docker login ghcr.io\
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io\
             -u ${{ github.actor }} --password-stdin
 
       - name: Build Docker image
         run: |
-          docker build -t wholesale-ml:latest .
+          docker build -t ghcr.io/${{ github.repository_owner }}/wholesale-ml:latest .
 
       - name: Push image to GHCR
         run: |
