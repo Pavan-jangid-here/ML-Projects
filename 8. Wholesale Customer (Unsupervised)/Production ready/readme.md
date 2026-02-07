@@ -82,3 +82,10 @@ docker run -p 8000:8000 wholesale-ml:latest
 
 1. Added lines in ci.yml
 2. Also update the build docker image with ghcr.io
+3. 🧠 Important Rule (Remember This Forever)
+    - Docker image names must be lowercase only
+        - This applies to:
+            1. Docker Hub
+            2. GHCR
+            3. Kubernetes
+            4. Cloud registries

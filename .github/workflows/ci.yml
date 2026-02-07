@@ -43,8 +43,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/wholesale-ml:latest .
+          IMAGE_OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper]' '[:lower]')
+          docker build -t ghcr.io/$IMAGE_OWNER/wholesale-ml:latest .
 
       - name: Push image to GHCR
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/wholesale-ml:latest
+          IMAGE_OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper]' '[:lower]')
+          docker push ghcr.io/$IMAGE_OWNER/wholesale-ml:latest
