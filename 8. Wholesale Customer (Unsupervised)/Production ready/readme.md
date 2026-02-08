@@ -90,3 +90,12 @@ docker run -p 8000:8000 wholesale-ml:latest
             3. Kubernetes
             4. Cloud registries
 4. Converted to lower case letter using [:upper:] [:lower:]
+
+
+# Started with the Image container deployment
+
+1. Using Render free tier as deployment
+2. Using Web app services using existing images
+3. Use this link: ghcr.io/pavan-jangid-here/wholesale-ml:latest
+4. You will find the new app deployed in link called: https://wholesale-ml-api.onrender.com/
+5. You will find the API in this place: https://wholesale-ml-api.onrender.com/docs/
