@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wholesale Customer Segmentation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      padding: 40px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+    }
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1e40af;
+    }
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Customer Segmentation</h2>
+
+  <input type="number" id="Channel" placeholder="Channel (1 or 2)" />
+  <input type="number" id="Region" placeholder="Region (1, 2, 3)" />
+  <input type="number" id="Fresh" placeholder="Fresh" />
+  <input type="number" id="Milk" placeholder="Milk" />
+  <input type="number" id="Grocery" placeholder="Grocery" />
+  <input type="number" id="Frozen" placeholder="Frozen" />
+  <input type="number" id="Detergents_Paper" placeholder="Detergents Paper" />
+  <input type="number" id="Delicassen" placeholder="Delicassen" />
+
+  <button onclick="predict()">Predict Cluster</button>
+
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  async function predict() {
+    const data = {
+      Channel: Number(document.getElementById("Channel").value),
+      Region: Number(document.getElementById("Region").value),
+      Fresh: Number(document.getElementById("Fresh").value),
+      Milk: Number(document.getElementById("Milk").value),
+      Grocery: Number(document.getElementById("Grocery").value),
+      Frozen: Number(document.getElementById("Frozen").value),
+      Detergents_Paper: Number(document.getElementById("Detergents_Paper").value),
+      Delicassen: Number(document.getElementById("Delicassen").value),
+    };
+
+    const response = await fetch(
+      "https://wholesale-ml-api.onrender.com/predict",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      }
+    );
+
+    const result = await response.json();
+    document.getElementById("result").innerText =
+      "Predicted Cluster: " + result.cluster;
+  }
+</script>
+
+</body>
+</html>

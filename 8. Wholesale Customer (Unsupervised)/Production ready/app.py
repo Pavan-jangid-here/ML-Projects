@@ -1,8 +1,17 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from src.inference import predict_cluster
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Wholesale Customer Segmentation API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # or your frontend URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class CustomerInput(BaseModel):
     Channel: int
