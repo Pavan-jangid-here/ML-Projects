@@ -99,3 +99,8 @@ docker run -p 8000:8000 wholesale-ml:latest
 3. Use this link: ghcr.io/pavan-jangid-here/wholesale-ml:latest
 4. You will find the new app deployed in link called: https://wholesale-ml-api.onrender.com/
 5. You will find the API in this place: https://wholesale-ml-api.onrender.com/docs/
+
+
+# Lets build front end and joint live api
+
+1. We will first build the front end and joint the api.
