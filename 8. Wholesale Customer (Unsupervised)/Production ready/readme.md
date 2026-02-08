@@ -104,3 +104,4 @@ docker run -p 8000:8000 wholesale-ml:latest
 # Lets build front end and joint live api
 
 1. We will first build the front end and joint the api.
+2. Link: https://wholesale-ml-ui.onrender.com
